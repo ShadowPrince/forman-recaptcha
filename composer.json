@@ -1,0 +1,28 @@
+{
+    "name": "shadowprince/forman-recaptcha",
+    "type": "library",
+    "description": "Recaptcha plugin for shadowprince/forman",
+    "keywords": ["slimext", "component", "forms", "forman", "recaptcha"],
+    "homepage": "http://shadowprince.github.com/forman-recaptcha",
+    "support": {
+        "source": "https://github.com/shadowprince/forman-recaptcha"
+    },
+    "authors": [
+        {
+            "name": "Vasiliy Horbachenko",
+            "email": "shadow.prince@ya.ru",
+            "homepage": "http://shadowprince.ru",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "BSD"
+    ],
+    "require": {
+        "php": ">=5.2.0",
+        "shadowprince/forman": ">0.1.1"
+    },
+    "autoload": {
+        "psr-0": {"Forman": "."}
+    }
+}
