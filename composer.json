@@ -20,7 +20,8 @@
     ],
     "require": {
         "php": ">=5.2.0",
-        "shadowprince/forman": ">0.1.1"
+        "shadowprince/forman": ">0.1.1",
+        "recaptcha/php5": "1.0.0"
     },
     "autoload": {
         "psr-0": {"Forman": "."}
