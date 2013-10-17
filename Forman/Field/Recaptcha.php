@@ -19,6 +19,12 @@ class Recaptcha extends Field {
         call_user_func_array("parent::__construct", func_get_args());
     }
 
+    /**
+     * Set recaptcha keys
+     * @param string
+     * @param string
+     * @return \Forman\Field\Field
+     */
     public function setKeys($private, $public) {
         $this->captcha->setPrivateKey($private);
         $this->captcha->setPublicKey($public);
@@ -26,6 +32,10 @@ class Recaptcha extends Field {
         return $this;
     }
 
+    /**
+     * Get recaptcha HTML code
+     * @return string
+     */
     public function getCaptchaHTML() {
         return $this->captcha->html();
     }
