@@ -10,8 +10,7 @@
  */
 namespace Forman\Render\HTML;
 
-class RecaptchaPlugin implements RendererPlugin {
-
+class RecaptchaPlugin extends Plugin {
     public function selectElementClass($field) {
         if ($field instanceof \Forman\Field\Recaptcha)
             return "\Forman\Render\HTML\Recaptcha";

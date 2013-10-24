@@ -40,7 +40,7 @@ class Recaptcha extends Field {
         return $this->captcha->html();
     }
 
-    public function validate($app) {
+    public function validate() {
         $response = $this->captcha->check();
         if (!$response->isValid()) {
             $this->error = $response->getError();
