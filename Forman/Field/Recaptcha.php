@@ -12,9 +12,11 @@ namespace Forman\Field;
 
 class Recaptcha extends Field {
     protected $captcha;
+    protected static $private, $public;
 
     public function __construct() {
         $this->captcha = new \Captcha\Captcha();
+        $this->setKeys(self::$private, self::$public);
 
         call_user_func_array("parent::__construct", func_get_args());
     }
@@ -48,5 +50,15 @@ class Recaptcha extends Field {
         } else {
             return true;
         }
+    }
+
+    /**
+     * Set default keys
+     * @param string
+     * @param string
+     */
+    public static function defaultKeys($private, $public) {
+        self::$private = $private;
+        self::$public = $public;
     }
 }
